@@ -5,7 +5,8 @@ use std::io;
 
 fn main() {
     println!("Welcome!");
-    let random_number = thread_rng().gen_range(1, 11);
+    let mut rng = thread_rng();
+    let random_number = rng.gen_range(0..=10);
     let mut trial_count: u8 = 0;
     loop {
         println!(
